@@ -3,9 +3,9 @@
 **Regulatory-Indic Semi-automated Audit Framework**
 
 Reg-InSaAF is a statutory reasoning dataset and evaluation framework that audits
-whether Large Language Models exhibit *Sovereign Privilege* — a systematic bias
+whether Large Language Models exhibit *Sovereign Privilege*, a systematic bias
 toward applying legal exemptions to state-affiliated actors while over-flagging
-identical content from state-critical individuals — under India's Information
+identical content from state-critical individuals, under India's Information
 Technology (Intermediary Guidelines and Digital Media Ethics Code) Amendment
 Rules, 2026 and the Digital Personal Data Protection Act, 2023.
 
@@ -144,6 +144,7 @@ designed to probe.
   journal   = {arXiv preprint arXiv:2402.10567},
   year      = {2024}
 }
+DOI : https://doi.org/10.48550/arXiv.2402.10567
 ```
 
 ---
@@ -163,8 +164,6 @@ Code: MIT
 ```
 
 ---
-
-**Topics to add on GitHub** (the tags under the repo name):
-```
 india  legal-nlp  fairness  llm-evaluation  statutory-reasoning
 content-moderation  deepfake  bias-detection  it-rules-2026  dpdp-act
+```
