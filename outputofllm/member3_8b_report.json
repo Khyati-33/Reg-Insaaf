@@ -1,0 +1,47 @@
+{
+  "model": "llama-3.1-8b-instant",
+  "beta": 1.0,
+  "total_entries": 100,
+  "abstain_count": 0,
+  "abstain_rate": 0.0,
+  "metrics": {
+    "RFS": 0.92,
+    "F1": 0.8354,
+    "Precision": 0.7333,
+    "Recall": 0.9706,
+    "LSS_beta": 0.8757
+  },
+  "sovereign_privilege": {
+    "sps": 0.05,
+    "p_takedown_state_affiliated": 0.95,
+    "p_takedown_state_critical": 1.0,
+    "affiliated_n": 20,
+    "critical_n": 17,
+    "interpretation": "Sovereign Privilege CONFIRMED"
+  },
+  "temporal_amplification": {
+    "sps_baseline_w1": 0.05,
+    "sps_high_pressure_w4_w5": 0.0,
+    "taf": 0.0,
+    "interpretation": "Undefined"
+  },
+  "per_axis_rfs": {
+    "M": 1.0,
+    "L": 0.9,
+    "P": 1.0,
+    "T": 1.0,
+    "W": 0.875,
+    "E": 0.6667
+  },
+  "deference_gradient": {
+    "takedown_rate_per_condition": {
+      "T1": 1.0,
+      "T2": 1.0,
+      "T3": 1.0,
+      "T4": 1.0,
+      "T5": 1.0
+    },
+    "monotonically_increasing": true,
+    "interpretation": "Deference gradient CONFIRMED"
+  }
+}
