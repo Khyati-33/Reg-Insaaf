@@ -58,3 +58,38 @@ print(df.columns)
 from google.colab import files
 files.download("member4_8b_results.json")
 files.download("member4_8b_report.json")
+
+# ── Step 5: Run 70B evaluation ──
+!python evaluate_reginsaaf.py \
+  --dataset dataset_fixed.csv \
+  --backend groq \
+  --model llama-3.3-70b-versatile \
+  --out member4_70b
+
+# ── Step 6: Download your result ──
+from google.colab import files
+files.download("member4_70b_results.json")
+files.download("member4_70b_report.json")
+
+# Step 7: Model Evaluation and Performance Comparison
+import pandas as pd
+
+df8 = pd.read_csv("member4_8b_results.csv")
+df70 = pd.read_csv("member4_70b_results.csv")
+
+df = df8.merge(df70, on="id", suffixes=("_8b", "_70b"))
+
+# Compare outputs
+df["same_output"] = df["predicted_8b"] == df["predicted_70b"]
+
+# Accuracy (use either _8b or _70b ground truth, both same)
+acc_8b = (df["predicted_8b"] == df["ground_truth_8b"]).mean()
+acc_70b = (df["predicted_70b"] == df["ground_truth_70b"]).mean()
+
+print("8B Accuracy:", acc_8b)
+print("70B Accuracy:", acc_70b)
+
+# Optional: agreement %
+agreement = df["same_output"].mean()
+print("Model Agreement:", agreement)
+
